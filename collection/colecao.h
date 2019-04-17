@@ -11,7 +11,7 @@
 #ELSE
 	EXTERN Col* colCreate(int n);
 	EXTERN int colInsert(Col*c, void* elm);
-	EXTERN int colQuery(Col *c, void* elm);
+	EXTERN Col* colQuery(Col *c, int n);
 	EXTERN Col* colRemove(Col *c, void* elm);
 	EXTERN int colDestroy(Col *c, void* elm);
 
