@@ -28,3 +28,14 @@ Col* colCreate(int n){
 	return NULL;
 }
 
+int colInsert(Col *c, void *elm){
+	if(c != NULL){
+		if(c-> numElms < c-> max){
+			c->elms[c->numElms] = elm;
+			c->numElms++;
+			return true;
+		}
+	}
+	return false;
+}
+
