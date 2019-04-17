@@ -50,3 +50,14 @@ int colDestroy(Col *c){
 	return false;
 }
 
+void* colRemoveLast(Col *c){
+	if(c != NULL){
+		if(c->numElms > 0){
+			void* elm;
+			elm = c->elms[c->numElms-1];
+			c->numElms--;
+			return elm;
+		}
+	}
+	return NULL;
+}
