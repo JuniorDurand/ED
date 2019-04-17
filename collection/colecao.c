@@ -1,6 +1,9 @@
-#IFNDEF _COLECAO_C_
-#DEFINE _COLECAO_C_
-#INCLUDE "colecao.h"
+#ifndef _COLECAO_C_
+#define _COLECAO_C_
+#include "colecao.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 
 typedef struct _colecao_{
 	int max;

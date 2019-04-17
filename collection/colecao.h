@@ -1,7 +1,10 @@
-#IFNDEF _COLECAO_H_
-#DEFINE _COLECAO_H_
-	typedef struct _colecao_ Col;
-#IFDEF _COLECAO_C_
+#ifndef _COLECAO_H_
+#define _COLECAO_H_
+#endif
+
+typedef struct _colecao_ Col;
+
+#ifdef _COLECAO_C_
 	Col* colCreate(int n);
 	int colInsert(Col*c, void* elm);
 	Col* colQuery(Col *c, int n);
@@ -9,12 +12,12 @@
 	int colDestroy(Col *c, void* elm);
 	void* colRemoveLast(Col *c)
 
-#ELSE
-	EXTERN Col* colCreate(int n);
-	EXTERN int colInsert(Col*c, void* elm);
-	EXTERN Col* colQuery(Col *c, int n);
-	//EXTERN Col* colRemove(Col *c, void* elm);
-	EXTERN int colDestroy(Col *c, void* elm);
-	EXTERN void* colRemoveLast(Col *c)
+#else
+	extern Col* colCreate(int n);
+	extern int colInsert(Col*c, void* elm);
+	extern Col* colQuery(Col *c, int n);
+	//extern Col* colRemove(Col *c, void* elm);
+	extern int colDestroy(Col *c, void* elm);
+	extern void* colRemoveLast(Col *c);
 
-#ENDIF
+#endif
