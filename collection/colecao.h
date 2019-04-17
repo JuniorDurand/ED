@@ -4,8 +4,8 @@
 #IFDEF _COLECAO_C_
 	Col* colCreate(int n);
 	int colInsert(Col*c, void* elm);
-	int colQuery(Col *c, void* elm);
-	int colRemove(Col *c, void* elm);
+	Col* colQuery(Col *c, int n);
+	Col* colRemove(Col *c, void* elm);
 	int colDestroy(Col *c, void* elm);
 
 #ELSE
