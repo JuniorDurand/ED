@@ -39,3 +39,14 @@ int colInsert(Col *c, void *elm){
 	return false;
 }
 
+int colDestroy(Col *c){
+	if(c != NULL){
+		if(c->numElms == 0){
+			free(c->elms);
+			free(c);
+			return true;
+		}
+	}
+	return false;
+}
+
