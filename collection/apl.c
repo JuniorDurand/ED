@@ -18,7 +18,13 @@ void main(void){
 			t=(Time*)malloc(sizeof(Time));
 			if(t != NULL){
 				scanf("%s %d %d",&t->nome, &t->numCampeao, &t->numVice);
+				colInsert(c, (void*)t);
 			}
+		}
+		t = (time*)colRemoveLast(c);
+		while(t != NULL){
+			printf("%s %d %d\n",t->nome , t->numCampeao, t->numVice);
+			t = (time*)colRemoveLast(c);
 		}
 	} 
 }
