@@ -61,3 +61,5 @@ void* colRemoveLast(Col *c){
 	}
 	return NULL;
 }
+
+
