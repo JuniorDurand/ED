@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "colecao.h"
+#define TRUE 1
+#define FALSE 0
 
 /*
 typedef struct _colecao_{
@@ -37,10 +39,10 @@ int colInsert(Col *c, void *elm){
 		if(c-> numElms < c-> max){
 			c->elms[c->numElms] = elm;
 			c->numElms++;
-			return true;
+			return TRUE;
 		}
 	}
-	return false;
+	return FALSE;
 }
 
 int colDestroy(Col *c){
@@ -48,10 +50,10 @@ int colDestroy(Col *c){
 		if(c->numElms == 0){
 			free(c->elms);
 			free(c);
-			return true;
+			return TRUE;
 		}
 	}
-	return false;
+	return FALSE;
 }
 
 void* colRemoveLast(Col *c){
