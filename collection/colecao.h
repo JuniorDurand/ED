@@ -13,7 +13,7 @@
 		int colInsert(Col*c, void* elm);
 		Col* colQuery(Col *c, int n);
 		//Col* colRemove(Col *c, void* elm);
-		int colDestroy(Col *c, void* elm);
+		int colDestroy(Col *c);
 		void* colRemoveLast(Col *c);
 
 	#else
@@ -22,7 +22,7 @@
 		extern int colInsert(Col*c, void* elm);
 		extern Col* colQuery(Col *c, int n);
 		//extern Col* colRemove(Col *c, void* elm);
-		extern int colDestroy(Col *c, void* elm);
+		extern int colDestroy(Col *c);
 		extern void* colRemoveLast(Col *c);
 
 	#endif // _COLECAO_C_
