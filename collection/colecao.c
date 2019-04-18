@@ -1,16 +1,17 @@
-#ifndef _COLECAO_C_
+//#ifndef _COLECAO_C_
 #define _COLECAO_C_
 #include "colecao.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-
+/*
 typedef struct _colecao_{
 	int max;
 	int numElms;
 	int cur;
 	void* *elms;//vetor de void* de tamanho max
 }Col;
+*/
 
 Col* colCreate(int n){
 	Col* c;
