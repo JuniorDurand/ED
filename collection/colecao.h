@@ -14,9 +14,10 @@
 		Col* colQuery(Col *c, int n);
 		//Col* colRemove(Col *c, void* elm);
 		int colDestroy(Col *c, void* elm);
-		void* colRemoveLast(Col *c)
+		void* colRemoveLast(Col *c);
 
 	#else
+		typedef struct _colecao_ Col;
 		extern Col* colCreate(int n);
 		extern int colInsert(Col*c, void* elm);
 		extern Col* colQuery(Col *c, int n);

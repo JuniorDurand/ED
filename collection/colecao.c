@@ -1,8 +1,8 @@
 //#ifndef _COLECAO_C_
 #define _COLECAO_C_
-#include "colecao.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "colecao.h"
 
 /*
 typedef struct _colecao_{
