@@ -26,9 +26,21 @@ int main(void){
 			t = (Time*)colQueryNext(c);
 		}
 		printf("\n---------------\n");
+		printf("Elemento removido:\n");
 		t = colRemoveFirst(c);
 		printf("%s %d %d\n",t->nome , t->numCampeao, t->numVice);
-		
+
+		printf("\n---------------\n");		
+		t = (Time*)colQueryFirst(c);
+		while(t != NULL){
+			printf("%s %d %d\n",t->nome , t->numCampeao, t->numVice);
+			t = (Time*)colQueryNext(c);
+		}
+		printf("\n---------------\n");
+		printf("Elemento removido:\n");
+		t = colRemoveN(c, 2);
+		printf("%s %d %d\n",t->nome , t->numCampeao, t->numVice);
+
 		printf("\n---------------\n");		
 		t = (Time*)colQueryFirst(c);
 		while(t != NULL){
