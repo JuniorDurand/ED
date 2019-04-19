@@ -73,7 +73,7 @@ void* colRemoveFirst(Col *c){
 		if(c-> numElms > 0){
 			Col *aux;
 			aux = c->elms[0];
-			for(i=0; i<c->numElms-1; i++){
+			for(int i=0; i<c->numElms-1; i++){
 				c->elms[i]=c->elms[i+1];
 			}
 			c->numElms--;
