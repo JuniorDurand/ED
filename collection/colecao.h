@@ -15,6 +15,7 @@
 		//Col* colRemove(Col *c, void* elm);
 		int colDestroy(Col *c);
 		void* colRemoveLast(Col *c);
+		void* colRemoveFirst(Col *c);
 		void* colQueryFirst(Col *c);
 		void* colQueryNext(Col *c);
 		void* colQueryN(Col *c, int n);
@@ -27,6 +28,7 @@
 		//extern Col* colRemove(Col *c, void* elm);
 		extern int colDestroy(Col *c);
 		extern void* colRemoveLast(Col *c);
+		extern void* colRemoveFirst(Col *c);
 		extern void* colQueryFirst(Col *c);
 		extern void* colQueryNext(Col *c);
 		extern void* colQueryN(Col *c, int n);

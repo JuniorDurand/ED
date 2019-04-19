@@ -68,6 +68,21 @@ void* colRemoveLast(Col *c){
 	return NULL;
 }
 
+void* colRemoveFirst(Col *c){
+	if(c != NULL){
+		if(c-> numElms > 0){
+			Col *aux;
+			aux = c->elms[0];
+			for(i=0; i<c->numElms-1; i++){
+				c->elms[i]=c->elms[i+1];
+			}
+			c->numElms--;
+			return aux;
+		}
+	}
+	return NULL;
+}
+
 void* colQueryFirst(Col *c){
 	if(c != NULL){
 		if(c-> numElms > 0){
