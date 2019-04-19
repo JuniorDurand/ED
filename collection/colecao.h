@@ -16,6 +16,7 @@
 		int colDestroy(Col *c);
 		void* colRemoveLast(Col *c);
 		void* colQueryFirst(Col *c);
+		void* colQueryNext(Col *c);
 
 	#else
 		typedef struct _colecao_ Col;
@@ -26,6 +27,7 @@
 		extern int colDestroy(Col *c);
 		extern void* colRemoveLast(Col *c);
 		extern void* colQueryFirst(Col *c);
+		extern void* colQueryNext(Col *c);
 
 	#endif // _COLECAO_C_
 

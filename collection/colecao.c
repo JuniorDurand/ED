@@ -81,4 +81,18 @@ void* colQueryFirst(Col *c){
 	return NULL;
 }
 
+void* colQueryNext(Col *c){
+	if(c != NULL){
+		if(c-> numElms > 0){
+			if(c->cur < c->numElms){
+				Col *aux;
+				aux = c->elms[c->cur];
+				c->cur++;
+				return aux;
+			}
+		}
+	}
+	return NULL;
+}
+
 
