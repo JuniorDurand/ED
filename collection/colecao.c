@@ -95,4 +95,16 @@ void* colQueryNext(Col *c){
 	return NULL;
 }
 
+void* colQueryN(Col *c, int n){//neste metodo não usamos c->cur;
+	if(c != NULL){
+		if(c-> numElms > 0){
+			if(n < c->numElms){
+				Col *aux;
+				aux = c->elms[n];
+				return aux;
+			}
+		}
+	}
+	return NULL;
+}
 
