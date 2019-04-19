@@ -29,6 +29,7 @@ int main(void){
 		t = colRemoveFirst(c);
 		printf("%s %d %d\n",t->nome , t->numCampeao, t->numVice);
 		
+		printf("\n---------------\n");		
 		t = (Time*)colQueryFirst(c);
 		while(t != NULL){
 			printf("%s %d %d\n",t->nome , t->numCampeao, t->numVice);
