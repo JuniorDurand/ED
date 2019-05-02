@@ -24,9 +24,7 @@
 		extern int stkPush(Stack* s, void* elm);
 		extern void* stkPop(Stack* s);
 		extern int stkIsEmpty(Stack *s);
-		extern void* stkQuery(Stack* s)
-
-
+		extern void* stkQuery(Stack* s);
 
 	#endif // _STACK_C_
 
