@@ -5,7 +5,7 @@ Repositório criado para armazenar os TADs (Tipo abstrato de dados) da disciplin
 ## Collection
 
 Implementação de coleção em linguagem C.
-informações de uso, complilação e interface na pasta [collection](/collection) ou na [documentação.](collection/docker.md)
+informações de uso, complilação e interface na pasta [collection](/collection) ou na [documentação.](collection/README.md)
 
 ## Stack
 
