@@ -10,3 +10,4 @@ informações de uso, complilação e interface na pasta [collection](/collectio
 ## Stack
 
 Implementação de pilha em linguagem C.
+informações de uso, complilação e interface na pasta [stack](/stack) ou na [documentação.](stack/README.md)
