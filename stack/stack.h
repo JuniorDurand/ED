@@ -13,6 +13,8 @@
 		int stkDestroy(Stack *s);
 		int stkPush(Stack* s, void* elm);
 		void* stkPop(Stack* s);
+		int stkIsEmpty(Stack *s);
+		void* stkQuery(Stack* s);
 
 	#else
 		
@@ -21,6 +23,8 @@
 		extern int stkDestroy(Stack *s);
 		extern int stkPush(Stack* s, void* elm);
 		extern void* stkPop(Stack* s);
+		extern int stkIsEmpty(Stack *s);
+		extern void* stkQuery(Stack* s)
 
 
 

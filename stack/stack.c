@@ -48,10 +48,28 @@ int stkPush(Stack* s, void* elm){
 
 void* stkPop(Stack* s){
 	if(s != NULL){
-		if(s->top<0){
+		if(s->top >= 0){
 			void* elm = s->elms[s->top];
 			s->top--;
 			return elm;
+		}
+	}
+	return NULL;
+}
+
+int stkIsEmpty(Stack *s){
+	if(s != NULL){
+		if (s->top < 0){
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
+
+void* stkQuery(Stack* s){
+	if(s != NULL){
+		if(s->top >= 0){
+			return s->elms[s->top];
 		}
 	}
 	return NULL;
