@@ -25,7 +25,7 @@ Queue* qCreate(int n){
 
 int qDestroy(Queue *q){
 	if(q != NULL){
-		if(q->nElms == 0){
+		if(q->rear < 0){
 			free(q->elms);
 			free(q);
 			*q = NULL;
