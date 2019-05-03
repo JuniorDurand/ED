@@ -62,7 +62,7 @@ void* qDequeue(Queue *q){
 }
 
 int qIsEmpty(Queue *q){
-	if(s != NULL){
+	if(q != NULL){
 		if (q->rear < 0){
 			return TRUE;
 		}
