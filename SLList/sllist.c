@@ -5,3 +5,12 @@
 #define TRUE 1
 #define FALSE 0
 
+SLList* sllCreate(){
+	SLList* list;
+	list = (SLList*)malloc(sizeof(SLList));
+	if(list != NULL){
+		list->first = NULL;
+		return list;
+	}
+	return NULL;
+}

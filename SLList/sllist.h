@@ -12,12 +12,14 @@
 			void* data;
 		}SLList;
 		
-
+		SLList* sllCreate();
 
 
 	#else		
 		typedef struct _sllelm_ SLNode;
 		typedef struct _sllist_ SLList;
+
+		SLList* sllCreate();
 
 
 	#endif // _SLLIST_C_
