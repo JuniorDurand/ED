@@ -14,3 +14,13 @@ SLList* sllCreate(){
 	}
 	return NULL;
 }
+
+int sllDestroy(sllist* list){
+	if(list != NULL){
+		if(list->first == NULL){
+			free(list);
+			return TRUE;
+		}
+	}
+	return FALSE;
+}

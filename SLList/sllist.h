@@ -13,6 +13,7 @@
 		}SLList;
 		
 		SLList* sllCreate();
+		int sllDestroy(sllist* list);
 
 
 	#else		
@@ -20,7 +21,7 @@
 		typedef struct _sllist_ SLList;
 
 		SLList* sllCreate();
-
+		int sllDestroy(sllist* list);
 
 	#endif // _SLLIST_C_
 
