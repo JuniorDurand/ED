@@ -24,3 +24,17 @@ int sllDestroy(sllist* list){
 	}
 	return FALSE;
 }
+
+int sllInsertFirst(SLList *list, void* data){
+	SLNode* newNode;
+	if(list!=NULL){
+		newNode = (SLNode*)malloc(sizeof(SLNode));
+		if(newNode != NULL){
+			newNode->data = data;
+			newNode->next = list->first;
+			list->first = newNode;
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
