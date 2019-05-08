@@ -38,3 +38,16 @@ int sllInsertFirst(SLList *list, void* data){
 	}
 	return FALSE;
 }
+
+void* sllRemoveFirst(SLList* list){
+	SLNode* aux;
+	void* data;
+	if(list != NULL){
+		aux= list->first;
+		list->first = aux->next;
+		data = aux->data;
+		free(aux);
+		return data;
+	}
+	return NULL;
+}
