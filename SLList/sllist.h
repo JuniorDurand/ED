@@ -16,6 +16,7 @@
 		int sllDestroy(sllist* list);
 		int sllInsertFirst(SLList *list, void* data);
 		void* sllRemoveFirst(SLList* list);
+		int sllInsertLast(SLList* list, void* data);
 
 
 	#else		
@@ -24,8 +25,9 @@
 
 		SLList* sllCreate();
 		int sllDestroy(sllist* list);
-		int sllInsertFirst(SLList *list, void* data)
+		int sllInsertFirst(SLList *list, void* data);
 		void* sllRemoveFirst(SLList* list);
+		int sllInsertLast(SLList* list, void* data);
 
 	#endif // _SLLIST_C_
 

@@ -51,3 +51,25 @@ void* sllRemoveFirst(SLList* list){
 	}
 	return NULL;
 }
+
+int sllInsertLast(SLList* list, void* data){
+	SLNode* newNode;
+	if(list != NULL){
+		newNode = (SLNode*)malloc(sizeof(SLNode));
+		if(newNode != NULL){
+			newNode->data = data;
+			newNode->next = NULL;
+			if(list -> first == NULL){
+				list -> first = newNode;
+			}else{
+				SLNode* cur = list->first;
+				while(cur->next != NULL){
+					cur= cur->next;
+				}
+				cur->next=newNode;
+			}
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
