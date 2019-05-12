@@ -73,27 +73,3 @@ int sllInsertLast(SLList* list, void* data){
 	}
 	return FALSE;
 }
-
-void* sllRemoveLast(SLList* list){
-	SLNode *last, *prev;
-	void *data;
-	if(list != NULL){
-		if(list->first != NULL){
-			last = list->first;
-			prev = NULL;
-			while(last->next != NULL){
-				prev = last;
-				last = last->next;
-			}
-			if(prev != NULL){
-				prev->next = NULL
-			}else{
-				list->first = NULL;
-			}
-			data = last->data;
-			free(last);
-			return data;
-		}
-	}
-	return NULL;
-}
