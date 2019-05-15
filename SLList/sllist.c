@@ -78,8 +78,8 @@ void* sllRemoveLast(SLList *list){
 	SLNode *last, *prev;
 	void* data;
 	if(list != NULL){
-		if(l->first != NULL){
-			last = l-> first;
+		if(list->first != NULL){
+			last = list-> first;
 			prev = NULL;
 			while(last->next != NULL){
 				prev = last;
@@ -88,11 +88,30 @@ void* sllRemoveLast(SLList *list){
 			if(prev != NULL){
 				prev->next=NULL;
 			}else{
-				l->first = NULL;
+				list->first = NULL;
 			}
 			data = last->data;
 			free(last);
 			return data;
+		}
+	}
+	return NULL;
+}
+
+void* sllQuery(SLList *list, void* key, int(*cmp)(void*,void*)){
+	SLNode *cur;
+	int stat;
+	if(list != NULL){
+		if(list->first != NULL){
+			cur = list->first;
+			stat = cmp(key, cur->data);
+			while(stat != TRUE && cur->next != NULL){
+				cur = cur->next;
+				stat = cmp(key, cur->data);
+			}
+			if(stat == TRUE){
+				return cur-> data;
+			}
 		}
 	}
 	return NULL;
