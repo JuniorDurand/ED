@@ -19,6 +19,7 @@
 		int sllInsertLast(SLList* list, void* data);
 		void* sllRemoveLast(SLList *list);
 		void* sllQuery(SLList *list, void* key, int(*cmp)(void*,void*));
+		void* sllRemoveSpec(SLList *list, void* key, int(*cmp)(void*,void*));
 
 
 	#else		
@@ -32,6 +33,7 @@
 		int sllInsertLast(SLList* list, void* data);
 		void* sllRemoveLast(SLList *list);
 		void* sllQuery(SLList *list, void* key, int(*cmp)(void*,void*));
+		void* sllRemoveSpec(SLList *list, void* key, int(*cmp)(void*,void*));
 
 	#endif // _SLLIST_C_
 

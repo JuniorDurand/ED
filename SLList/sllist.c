@@ -116,3 +116,29 @@ void* sllQuery(SLList *list, void* key, int(*cmp)(void*,void*)){
 	}
 	return NULL;
 }
+
+void* sllRemoveSpec(SLList *list, void* key, int(*cmp)(void*,void*)){
+	SLNode *spec, *prev;
+	void* data;
+	if(list != NULL){
+		if(list->first != NULL){
+			prev = NULL;
+			spec = list-> first;
+			stat = cmp(key, spec->data);
+			while(stat != TRUE && spec->next != NULL){
+				prev = spec;
+				spec = spec->next;
+				stat = cmp(key, spec->data);
+			}
+			if(prev == NULL){
+				list->first = spec->next;
+			}else{
+				prev->next=spec->next;
+			}
+			data = spec->data;
+			free(spec);
+			return data;
+		}
+	}
+	return NULL;
+}
