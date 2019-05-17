@@ -9,7 +9,7 @@
 
 		typedef struct _sllist_{
 			SLNode* first;
-			void* data;
+			SLNode* cur;
 		}SLList;
 		
 		SLList* sllCreate();
