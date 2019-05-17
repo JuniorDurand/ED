@@ -10,6 +10,7 @@ SLList* sllCreate(){
 	list = (SLList*)malloc(sizeof(SLList));
 	if(list != NULL){
 		list->first = NULL;
+		list->cur = NULL;
 		return list;
 	}
 	return NULL;
