@@ -143,3 +143,15 @@ void* sllRemoveSpec(SLList *list, void* key, int(*cmp)(void*,void*)){
 	}
 	return NULL;
 }
+
+void* sllGetFirst(SLList *list){
+	void* data;
+	if(list != NULL){
+		if(list->first != NULL){
+			list->cur = list->first;
+			data = list->first->data;
+			return data;
+		}
+	}
+	return NULL;
+}

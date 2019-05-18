@@ -20,6 +20,7 @@
 		void* sllRemoveLast(SLList *list);
 		void* sllQuery(SLList *list, void* key, int(*cmp)(void*,void*));
 		void* sllRemoveSpec(SLList *list, void* key, int(*cmp)(void*,void*));
+		void* sllGetFirst(SLList *list);
 
 
 	#else		
@@ -34,6 +35,7 @@
 		void* sllRemoveLast(SLList *list);
 		void* sllQuery(SLList *list, void* key, int(*cmp)(void*,void*));
 		void* sllRemoveSpec(SLList *list, void* key, int(*cmp)(void*,void*));
+		void* sllGetFirst(SLList *list);
 
 	#endif // _SLLIST_C_
 
