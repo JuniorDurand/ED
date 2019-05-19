@@ -155,3 +155,15 @@ void* sllGetFirst(SLList *list){
 	}
 	return NULL;
 }
+
+void* sllGetNext(SLList* list){
+	void* data;
+	if(list != NULL){
+		if(list->cur != NULL){
+			list->cur = list->cur->next;
+			data = list->cur->data;
+			return data;
+		}
+	}
+	return NULL;
+}
