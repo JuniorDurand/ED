@@ -15,6 +15,9 @@
 		DLList* sllCreate();
 		int sllDestroy(DLList* list);
 		int dllInsertFirst(DLList *list, void *data);
+		void* dllRemoveFirst(DLList *list);
+		int dllInsertLast(DLList *list, void *data);
+		void* dllRemoveLast(DLList *list);
 		
 
 
@@ -25,6 +28,9 @@
 		DLList* sllCreate();
 		int sllDestroy(DLList* list);
 		int dllInsertFirst(DLList *list, void *data);
+		void* dllRemoveFirst(DLList *list);
+		int dllInsertLast(DLList *list, void *data);
+		void* dllRemoveLast(DLList *list);
 
 	#endif // _DLLIST_C_
 

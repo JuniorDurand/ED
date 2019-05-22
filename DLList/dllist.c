@@ -63,3 +63,68 @@ int dllInsertFirst(DLList *list, void *data){
 	}
 	return FALSE;
 }
+
+void* dllRemoveFirst(DLList *list){
+	DLNode *first;
+	void *data;
+	if(list != NULL){
+		if(list->first != NULL){
+			first = list->first;
+			list->first = first->next;
+			if(list->first != NULL){
+				list->first->prev = NULL;
+			}
+			data = first->data;
+			free(first);
+			return data;
+		}
+	}
+	return NULL;
+}
+
+int dllInsertLast(DLList *list, void *data){
+	DLNode* newNode, *cur;
+	if(list != NULL){
+		newNode = (DLNode*)malloc(sizeof(DLNode));
+		if(newNode != TRUE){
+			newNode->data = data;
+			if(list -> first != NULL){
+				cur = list->first;
+				while(cur->next!=NULL){
+					cur= cur->next;
+				}
+				cur->next = newNode;
+				newNode->prev = cur;
+			}else{
+				list->first = newNode;
+				newNode->next = NULL;
+				newNode->prev = NULL;
+			}	
+
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
+
+void* dllRemoveLast(DLList *list){
+	DLNode *cur;
+	void* data;
+	if(list != NULL){
+		if(list -> first != NULL){
+			cur = list->first;
+			while(cur->next!=NULL){
+				cur= cur->next;
+			}
+			data = cur->data;
+			if(cur->prev != NULL){
+				cur->prev->next = NULL;
+			}else{
+				list->first=NULL;
+			}
+			free(cur);
+			return data;
+		}
+	}
+	return NULL;
+}
