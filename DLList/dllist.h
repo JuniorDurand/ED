@@ -18,6 +18,8 @@
 		void* dllRemoveFirst(DLList *list);
 		int dllInsertLast(DLList *list, void *data);
 		void* dllRemoveLast(DLList *list);
+		void* dllGetFirst(DLList *list);
+		void* sllGetNext(DLList* list);
 		
 
 
@@ -31,6 +33,8 @@
 		void* dllRemoveFirst(DLList *list);
 		int dllInsertLast(DLList *list, void *data);
 		void* dllRemoveLast(DLList *list);
+		void* dllGetFirst(DLList *list);
+		void* sllGetNext(DLList* list)
 
 	#endif // _DLLIST_C_
 

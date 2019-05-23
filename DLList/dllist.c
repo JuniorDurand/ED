@@ -128,3 +128,29 @@ void* dllRemoveLast(DLList *list){
 	}
 	return NULL;
 }
+
+void* dllGetFirst(DLList *list){
+	void* data;
+	if(list != NULL){
+		if(list->first != NULL){
+			list->cur = list->first;
+			data = list->first->data;
+			return data;
+		}
+	}
+	return NULL;
+}
+
+void* sllGetNext(DLList* list){
+	void* data;
+	if(list != NULL){
+		if(list->cur != NULL){
+			if(list->cur->next != NULL){	
+				list->cur = list->cur->next;
+				data = list->cur->data;
+			}
+			return data;
+		}
+	}
+	return NULL;
+}
