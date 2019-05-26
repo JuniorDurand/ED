@@ -19,7 +19,8 @@
 		int dllInsertLast(DLList *list, void *data);
 		void* dllRemoveLast(DLList *list);
 		void* dllGetFirst(DLList *list);
-		void* sllGetNext(DLList* list);
+		void* dllGetNext(DLList* list);
+		void* dllQuery(DLList *list, void* key, int(*cmp)(void*,void*));
 		
 
 
@@ -34,7 +35,8 @@
 		int dllInsertLast(DLList *list, void *data);
 		void* dllRemoveLast(DLList *list);
 		void* dllGetFirst(DLList *list);
-		void* sllGetNext(DLList* list)
+		void* dllGetNext(DLList* list);
+		void* dllQuery(DLList *list, void* key, int(*cmp)(void*,void*));
 
 	#endif // _DLLIST_C_
 

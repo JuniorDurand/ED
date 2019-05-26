@@ -141,7 +141,7 @@ void* dllGetFirst(DLList *list){
 	return NULL;
 }
 
-void* sllGetNext(DLList* list){
+void* dllGetNext(DLList* list){
 	void* data;
 	if(list != NULL){
 		if(list->cur != NULL){
@@ -150,6 +150,22 @@ void* sllGetNext(DLList* list){
 				data = list->cur->data;
 			}
 			return data;
+		}
+	}
+	return NULL;
+}
+
+void* dllQuery(DLList *list, void* key, int(*cmp)(void*,void*)){
+	DLNode *spec;
+	void *data;
+	int stat;
+	if(list != NULL){
+		if(list->first != NULL){
+			spec = dllGetNode(list, key, cmp);
+			if(spec != NULL){
+				data = spec->data;
+				return data;
+			}
 		}
 	}
 	return NULL;
