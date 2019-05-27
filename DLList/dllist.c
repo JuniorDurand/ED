@@ -170,3 +170,29 @@ void* dllQuery(DLList *list, void* key, int(*cmp)(void*,void*)){
 	}
 	return NULL;
 }
+
+void* dllRemoveSpec(DLList *list, void* key, int(*cmp)(void*,void*)){
+	DLNode *spec, *prev, *next;
+	void* data;
+	if(list != NULL){
+		if(list->first != NULL){
+			spec = dllGetNode(list, key, cmp);
+			if(spec != NULL){
+				data = spec->data;
+				prev = spec->prev;
+				next = spec->next;
+				if(prev != NULL){
+					prev->next = spec -> next;
+				}else{
+					list->first = spec->next;
+				}
+				if( next!= NULL){
+					next->prev = prev;
+				}
+				free(spec);
+				return data;
+			}
+		}
+	}
+	return NULL;
+}

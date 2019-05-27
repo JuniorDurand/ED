@@ -21,6 +21,7 @@
 		void* dllGetFirst(DLList *list);
 		void* dllGetNext(DLList* list);
 		void* dllQuery(DLList *list, void* key, int(*cmp)(void*,void*));
+		void* dllRemoveSpec(DLList *list, void* key, int(*cmp)(void*,void*));
 		
 
 
@@ -37,6 +38,7 @@
 		void* dllGetFirst(DLList *list);
 		void* dllGetNext(DLList* list);
 		void* dllQuery(DLList *list, void* key, int(*cmp)(void*,void*));
+		void* dllRemoveSpec(DLList *list, void* key, int(*cmp)(void*,void*));
 
 	#endif // _DLLIST_C_
 
