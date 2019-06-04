@@ -5,7 +5,7 @@
 #define TRUE 1
 #define FALSE 0
 
-SLList* sllCreate(){
+SLList* sllcCreate(){
 	SLList* list;
 	list = (SLList*)malloc(sizeof(SLList));
 	if(list != NULL){
@@ -16,10 +16,33 @@ SLList* sllCreate(){
 	return NULL;
 }
 
-int sllDestroy(sllist* list){
+int sllcDestroy(sllist* list){
 	if(list != NULL){
 		if(list->first == NULL){
 			free(list);
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
+
+int sllcInsertFisrt(sllist *list, void *data){
+	SLNode *newNode, *last;
+	if(list != NULL){
+		newNode = (SLNode*)malloc(sizeof(SLNode));
+		if(newNode != NULL){
+			newNode->data = data;
+			if(list ->first != NULL){
+				last = list -> first;
+				while(last->next != list->first){
+					last = last->next;
+				}
+				newNode->next = list->first;
+				last->next = newNode;
+			}else{
+				list->first = newNode;
+				newNode -> next = newNode;
+			}
 			return TRUE;
 		}
 	}
