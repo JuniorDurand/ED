@@ -49,3 +49,25 @@ int sllcInsertFisrt(sllist *list, void *data){
 	return FALSE;
 }
 
+void *sllcRemoveFisrt(sllist *list){
+	SLNode *last, *first;
+	void *data;
+	if(list != NULL){
+		if(list-> first != NULL){
+			last = list -> first;
+			while(last->next != list->first){
+				last = last->next;
+			}
+			first = list->first;
+			if(last == first){
+				list->first = NULL;
+			}else{
+				last->next = first->next;
+				list->first = first->next;
+			}
+			data = first->data;
+			return data;
+		}
+	}
+	return NULL;
+}

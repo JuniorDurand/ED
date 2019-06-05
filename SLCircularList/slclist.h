@@ -15,6 +15,7 @@
 		SLList* sllCreate();
 		int sllDestroy(sllist* list);
 		int sllcInsertFisrt(sllist *list, void *data);
+		void *sllcRemoveFisrt(sllist *list);
 
 
 	#else		
@@ -24,6 +25,7 @@
 		SLList* sllCreate();
 		int sllDestroy(sllist* list);
 		int sllcInsertFisrt(sllist *list, void *data);
+		void *sllcRemoveFisrt(sllist *list);
 
 	#endif // _SLCLIST_C_
 
