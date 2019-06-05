@@ -66,6 +66,7 @@ void *sllcRemoveFisrt(sllist *list){
 				list->first = first->next;
 			}
 			data = first->data;
+			free(first);
 			return data;
 		}
 	}
