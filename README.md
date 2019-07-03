@@ -2,42 +2,52 @@
 
 Repositório criado para armazenar os TADs (Tipo abstrato de dados) da disciplina Estrutura de dados I, ministrado no curso de ciência da computação na Universidade federal do Maranhão (UFMA).
 
-## Collection
+## Estruturas Implementadas
+
+
+* [Coleção](/Collection)
+* [Pilha](/Stack)
+* [Fila](/Queue)
+* [Fila Circular](/QueueC)
+* [Lista Linear Simplesmente encadeada](/SLList)
+* [Lista Linear Duplamente encadeada](/DLList)
+* [Lista Circular Simplesmente encadeada](/SLCircularList)
+
+
+
+### Collection
 
 Implementação de coleção em linguagem C.
 informações de uso, complilação e interface na pasta [Collection](/Collection) ou na [documentação.](Collection/README.md)
 
-## Stack
+### Stack
 
 Implementação de pilha em linguagem C.
-informações de uso, complilação e interface na pasta [stack](/stack) ou na [documentação.](Stack/README.md)
+informações de uso, complilação e interface na pasta [Stack](/Stack) ou na [documentação.](Stack/README.md)
 
-## Queue
+### Queue
 
 Implementação de fila em linguagem C.
 informações de uso, complilação e interface na pasta [Queue](/Queue) ou na [documentação.](Queue/README.md)
 
-## QueueC
+### QueueC
 
 Implementação de fila circular em linguagem C.
 informações de uso, complilação e interface na pasta [QueueC](/QueueC) ou na [documentação.](QueueC/README.md)
 
-## SLList
+### SLList
 
 Implementação de lista linear simplesmente encadeada em linguagem C.
 informações de uso, complilação e interface na pasta [SLList](/SLList) ou na [documentação.](SLList/README.md)
 
-## DLList
+### DLList
 
 Implementação de lista linear duplamente encadeada em linguagem C.
 informações de uso, complilação e interface na pasta [DLList](/DLList) ou na [documentação.](DLList/README.md)
 
-## SLCircularList
+### SLCircularList
 
 Implementação de lista circular simplesmente encadeada em linguagem C.
 informações de uso, complilação e interface na pasta [SLCircularList](/SLCircularList) ou na [documentação.](SLCircularList/README.md)
 
-## SllStack
 
-Implementação de pilha baseada em lista linear simplesmente encadeada em linguagem C.
-informações de uso, complilação e interface na pasta [DLList](/DLList) ou na [documentação.](DLList/README.md)
