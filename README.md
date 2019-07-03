@@ -5,9 +5,39 @@ Repositório criado para armazenar os TADs (Tipo abstrato de dados) da disciplin
 ## Collection
 
 Implementação de coleção em linguagem C.
-informações de uso, complilação e interface na pasta [collection](/collection) ou na [documentação.](collection/README.md)
+informações de uso, complilação e interface na pasta [Collection](/Collection) ou na [documentação.](Collection/README.md)
 
 ## Stack
 
 Implementação de pilha em linguagem C.
-informações de uso, complilação e interface na pasta [stack](/stack) ou na [documentação.](stack/README.md)
+informações de uso, complilação e interface na pasta [stack](/stack) ou na [documentação.](Stack/README.md)
+
+## Queue
+
+Implementação de fila em linguagem C.
+informações de uso, complilação e interface na pasta [Queue](/Queue) ou na [documentação.](Queue/README.md)
+
+## QueueC
+
+Implementação de fila circular em linguagem C.
+informações de uso, complilação e interface na pasta [QueueC](/QueueC) ou na [documentação.](QueueC/README.md)
+
+## SLList
+
+Implementação de lista linear simplesmente encadeada em linguagem C.
+informações de uso, complilação e interface na pasta [SLList](/SLList) ou na [documentação.](SLList/README.md)
+
+## DLList
+
+Implementação de lista linear duplamente encadeada em linguagem C.
+informações de uso, complilação e interface na pasta [DLList](/DLList) ou na [documentação.](DLList/README.md)
+
+## SLCircularList
+
+Implementação de lista circular simplesmente encadeada em linguagem C.
+informações de uso, complilação e interface na pasta [SLCircularList](/SLCircularList) ou na [documentação.](SLCircularList/README.md)
+
+## SllStack
+
+Implementação de pilha baseada em lista linear simplesmente encadeada em linguagem C.
+informações de uso, complilação e interface na pasta [DLList](/DLList) ou na [documentação.](DLList/README.md)
