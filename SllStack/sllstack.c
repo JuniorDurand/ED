@@ -5,9 +5,9 @@
 #define TRUE 1
 #define FALSE 0
 
-SLList* sllStkCreate(){
-	SLList* list;
-	list = (SLList*)malloc(sizeof(SLList));
+SLLStack* sllStkCreate(){
+	SLLStack* list;
+	list = (SLLStack*)malloc(sizeof(SLLStack));
 	if(list != NULL){
 		list->first = NULL;
 		list->cur = NULL;
@@ -16,7 +16,7 @@ SLList* sllStkCreate(){
 	return NULL;
 }
 
-int sllStkDestroy(sllist* list){
+int sllStkDestroy(SLLStack* list){
 	if(list != NULL){
 		if(list->first == NULL){
 			free(list);
@@ -26,7 +26,7 @@ int sllStkDestroy(sllist* list){
 	return FALSE;
 }
 
-int sllStkPush(SLList *list, void* data){
+int sllStkPush(SLLStack *list, void* data){
 	SLNode* newNode;
 	if(list!=NULL){
 		newNode = (SLNode*)malloc(sizeof(SLNode));
@@ -40,7 +40,7 @@ int sllStkPush(SLList *list, void* data){
 	return FALSE;
 }
 
-void* sllStkPop(SLList* list){
+void* sllStkPop(SLLStack* list){
 	SLNode* aux;
 	void* data;
 	if(list != NULL){
@@ -54,7 +54,7 @@ void* sllStkPop(SLList* list){
 }
 
 
-void* sllStkGetFirst(SLList *list){
+void* sllStkGetFirst(SLLStack *list){
 	void* data;
 	if(list != NULL){
 		if(list->first != NULL){
@@ -66,7 +66,7 @@ void* sllStkGetFirst(SLList *list){
 	return NULL;
 }
 
-void* sllStkGetNext(SLList* list){
+void* sllStkGetNext(SLLStack* list){
 	void* data;
 	if(list != NULL){
 		if(list->cur != NULL){

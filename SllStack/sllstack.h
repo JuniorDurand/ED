@@ -12,23 +12,23 @@
 			SLNode* cur;
 			void* data;
 		}SLLStack;
-		SLList* sllStkCreate();
-		int sllStkDestroy(sllist* list);
-		int sllStkPush(SLList *list, void* data);
-		void* sllStkPop(SLList* list);
-		void* sllStkGetFirst(SLList *list);
-		void* sllStkGetNext(SLList* list);
+		SLLStack* sllStkCreate();
+		int sllStkDestroy(SLLStack* list);
+		int sllStkPush(SLLStack *list, void* data);
+		void* sllStkPop(SLLStack* list);
+		void* sllStkGetFirst(SLLStack *list);
+		void* sllStkGetNext(SLLStack* list);
 
 
 	#else		
 		typedef struct _sllelm_ SLNode;
-		typedef struct _sllist_ SLList;
-		SLList* sllStkCreate();
-		int sllStkDestroy(sllist* list);
-		int sllStkPush(SLList *list, void* data);
-		void* sllStkPop(SLList* list);
-		void* sllStkGetFirst(SLList *list);
-		void* sllStkGetNext(SLList* list);
+		typedef struct _sllstack_ SLLStack;
+		SLLStack* sllStkCreate();
+		int sllStkDestroy(SLLStack* list);
+		int sllStkPush(SLLStack *list, void* data);
+		void* sllStkPop(SLLStack* list);
+		void* sllStkGetFirst(SLLStack *list);
+		void* sllStkGetNext(SLLStack* list);
 
 
 	#endif // _SLLSTACK_C_
