@@ -16,18 +16,18 @@ void PreOrdem(TNode *tNode, void (*visit)(void *)){
 
 void Simetrica(TNode *tNode, void (*visit)(void *)){
     if (tNode != NULL){
-        PreOrdem(tNode->l, visit);
+        Simetrica(tNode->l, visit);
         visit(tNode->data);
-        PreOrdem(tNode->r, visit);
+        Simetrica(tNode->r, visit);
     }
 }
 
 
 void PosOrdem(TNode *tNode, void (*visit)(void *)){
     if (tNode != NULL){
-        PreOrdem(tNode->l, visit);
+        PosOrdem(tNode->l, visit);
         visit(tNode->data);
-        PreOrdem(tNode->r, visit);
+        PosOrdem(tNode->r, visit);
     }
 }
 
@@ -49,6 +49,57 @@ TNode* abpInsert(TNode* t, void*data, int (*cmp)(void*,void*)){
             newt->l = NULL;
             newt->r = NULL;
             return newt;
+        }
+    }
+    return NULL;
+}
+
+
+TNode* removeMaiorArvore(TNode* t, void** data){
+    if(t!= NULL){
+        if(t->r != NULL){
+            t->r = removeMaiorArvore(t->r, data);
+            return t;
+        }else{
+            *data = t->data;
+            return t->l;
+        }
+    }
+    return NULL;
+}
+
+
+TNode* abpRemove(TNode *t, void* key, void** data, int(*cmp)(void*, void*)){
+    TNode* curt;
+    void* dataMaiorSubArvoreEsq;
+    int stat;
+    if(t != NULL){
+
+        stat = cmp(key, t->data);
+        if(stat < 0){
+            t->l = abpRemove(t->l, key, data, cmp);
+            return t;
+        }else if(stat > 0){
+            t->r = abpRemove(t->r, key, data, cmp);
+            return t;
+        }else if(stat == 0){
+            *data = t->data;
+            if(t->l == NULL && t->r == NULL){
+                free(t);
+                return NULL;
+            }else if(t->l == NULL && t->r != NULL){
+                curt = t->r;
+                free(t);
+                return curt;
+            }else if(t->l != NULL && t->r == NULL){
+                curt = t->l;
+                free(t);
+                return curt;
+            }else{
+                t->l = removeMaiorArvore(t->l, &dataMaiorSubArvoreEsq);
+                t->data = dataMaiorSubArvoreEsq;
+                return t;
+            }
         }
     }
     return NULL;

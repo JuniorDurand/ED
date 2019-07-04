@@ -11,6 +11,7 @@
 		void Simetrica(TNode *tNode, void (*visit)(void *item));
 		void PosOrdem(TNode *tNode, void (*visit)(void *item));
 		TNode* abpInsert(TNode* t, void*data, int (*cmp)(void*,void*));
+		TNode* abpRemove(TNode *t, void* key, void** data, int(*cmp)(void*, void*));
 
 
 	#else	
@@ -20,7 +21,7 @@
 		void Simetrica(TNode *tNode, void (*visit)(void *item));
 		void PosOrdem(TNode *tNode, void (*visit)(void *item));
 		TNode* abpInsert(TNode* t, void*data, int (*cmp)(void*,void*));
-
+		TNode* abpRemove(TNode *t, void* key, void** data, int(*cmp)(void*, void*));
 
 
 	#endif 
