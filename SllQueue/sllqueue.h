@@ -24,7 +24,7 @@
 
 	#else		
 		typedef struct _sllelm_ SLNode;
-		typedef struct _sllstack_ SLLQueue;
+		typedef struct _sllQueue_ SLLQueue;
 		SLLQueue* sllqCreate();
 		int sllqDestroy(SLLQueue* list);
 		int sllqEnqueue(SLLQueue* list, void* data);
@@ -33,6 +33,6 @@
 		void* sllqGetNext(SLLQueue* list);
 
 
-	#endif // _SLLSTACK_C_
+	#endif // 
 
 #endif
