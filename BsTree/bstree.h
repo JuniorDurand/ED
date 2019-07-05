@@ -12,6 +12,8 @@
 		void PosOrdem(TNode *tNode, void (*visit)(void *item));
 		TNode* abpInsert(TNode* t, void*data, int (*cmp)(void*,void*));
 		TNode* abpRemove(TNode *t, void* key, void** data, int(*cmp)(void*, void*));
+		void* abpQuery(TNode *t, void *key, int(*cmp)(void*, void*));
+		int abpAltura(TNode* t);
 
 
 	#else	
@@ -22,7 +24,8 @@
 		void PosOrdem(TNode *tNode, void (*visit)(void *item));
 		TNode* abpInsert(TNode* t, void*data, int (*cmp)(void*,void*));
 		TNode* abpRemove(TNode *t, void* key, void** data, int(*cmp)(void*, void*));
-
+		void* abpQuery(TNode *t, void *key, int(*cmp)(void*, void*));
+		int abpCountNodes(TNode *t);
 
 	#endif 
 

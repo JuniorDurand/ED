@@ -104,3 +104,57 @@ TNode* abpRemove(TNode *t, void* key, void** data, int(*cmp)(void*, void*)){
     }
     return NULL;
 }
+
+void* abpQuery(TNode *t, void *key, int(*cmp)(void*, void*)){
+    int stat;
+    if(t != NULL){
+        stat = cmp(key, t->data);
+        if(stat == 0){
+            return t->data;
+        }else if(stat < 0){
+            return abpQuery(t->l, key, cmp);
+        }else{
+            return abpQuery(t->r, key, cmp);
+        }
+    }
+    return NULL;
+}
+
+
+int abpAltura(TNode* t){
+    int h, hl, hr;
+    if(t != NULL){
+        hl = abpAltura(t->l);
+        hr = abpAltura(t->r);
+        if(hl > hr){
+            h = 1 + hl;
+        }else{
+            h = 1 + hr;
+        }
+        return h;
+    }
+    return 0;
+}
+
+int abpCountNodes(TNode *t){
+    int nl, nr;
+    if(t != NULL){
+        nl = abpCountNode(t->l);
+        nr = abpCountNode(t->r);
+        return 1 + nl + nr;
+    }
+    return 0;
+}
+
+int abpCountLeafNodes(TNode *t){
+    int nl, nr, leaf = 0;
+    if(t != NULL){
+        nl = abpCountLeafNodes(t->l);
+        nr = abpCountLeafNodes(t->r);
+        if(t->l == NULL && t->r == NULL){
+            leaf = 1;
+        }
+        return nl + nr + leaf;
+    }
+    return 0;
+}
